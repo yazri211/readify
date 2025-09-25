@@ -20,7 +20,7 @@ nav {
   justify-content: space-between;
   padding: 5px 30px;
   background-color: #176341;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .logo img {
@@ -51,12 +51,13 @@ nav ul li a{
 }
 
 nav ul li a:hover {
-    background-color:#10714fd8;
+  background-color:#10714fd8;
 }
 
 @media (max-width: 768px) {
   nav {
     padding: 5px 15px;
+    margin: 0px;
   }
 
   nav ul {
@@ -69,11 +70,10 @@ nav ul li a:hover {
   }
 
   .logo img {
-    width: 80px;
+    width: 60px;
     height: auto;
   }
 }
-
 /* akhir sytle navbar */
 
 /* style beranda */
@@ -113,20 +113,6 @@ nav ul li a:hover {
   font-size: clamp(14px, 2vw, 18px);
 }
 
-.isi-beranda a{
-  font-size: clamp(14px, 2vw, 18px);
-  text-decoration: none;
-  background-color:#10714fd8;
-  color: white;
-  border-radius: 30px;
-  padding :10px 15px;
-  display: inline-block;
-}
-
-.isi-beranda a:hover {
-  background-color: #0b4c35d8;
-}
-
 .fitur-mini {
   display: flex;
   flex-wrap: wrap;
@@ -156,30 +142,28 @@ nav ul li a:hover {
   margin: 6px 0 0;
 }
 
-.gambar-beranda {
-  flex: 1;
-  text-align: right;
+.isi-beranda a{
+  font-size: clamp(14px, 2vw, 18px);
+  text-decoration: none;
+  background-color:#10714fd8;
+  color: white;
+  border-radius: 30px;
+  padding :10px 15px;
+  display: inline-block;
 }
 
-.gambar-beranda img {
-  max-width: 100%;
-  height: auto;
+.isi-beranda a:hover {
+  background-color: #0b4c35d8;
 }
 
 @media (max-width: 768px) {
   .beranda {
-    align-items: flex-start; /* teks naik ke atas */
-    padding-top: 150px;       /* kasih jarak biar ga mepet banget */
+    align-items: flex-start; 
+    padding-top: 150px;       
     background-position: 45% center;
   }
 
-  /* .gambar-beranda {
-    text-align: center;     
-    margin-top: 20px;
-  } */
-
 }
-
 /* akhir style beranda */
 
 /* style tentang */
@@ -190,7 +174,7 @@ nav ul li a:hover {
   background-repeat: no-repeat; 
   background-position: center; 
   background-attachment: fixed;
-  padding: 5vw; /* padding relatif */
+  padding: 5vw; 
   box-sizing: border-box;
   min-height: 100vh;
   margin: 0; 
@@ -203,51 +187,49 @@ nav ul li a:hover {
 
 .head-tentang h1 {
   color: #faebd7;
-  font-size: clamp(22px, 4vw, 40px); /* otomatis mengecil saat layar kecil */
+  font-size: clamp(22px, 4vw, 40px); 
 }
 
 .bagian-tentang {
   display: flex;
-  flex-wrap: wrap; /* otomatis turun ke bawah jika sempit */
+  flex-wrap: wrap; 
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* jarak fleksibel */
+  gap: 2rem;
   margin-top: 4vh;
 }
 
 .gambar-tentang {
-  flex: 1 1 250px; /* minimal 250px, sisanya fleksibel */
+  flex: 1 1 250px;
   display: flex;
   justify-content: center;
 }
 
 .gambar-tentang img {
   width: 100%;
-  max-width: 300px; /* biar ga terlalu besar */
+  max-width: 300px; 
   height: auto;
-  border-radius: 8px;
 }
 
 .isi-tentang {
-  flex: 2 1 300px; /* minimal 300px, sisanya fleksibel */
+  flex: 2 1 300px;
 }
 
 .text-isi-tentang {
   border-radius: 20px;
   margin: 2vh 0;
   background-color: #faebd7;
-  padding: 0.5rem;
+  padding: clamp(15px, 2vw, 20px);
 }
 
 .text-isi-tentang h3 {
-  font-size: clamp(15px, 2vw, 20px); /* menyesuaikan ukuran layar */
+  font-size: clamp(15px, 2vw, 20px); 
   color: black;
   line-height: 1.5;
   font-weight: 400;
   font-family:serif;
   text-align: justify;
 }
-
 /* akhir style tentang */
 
 /* style koleksi */
@@ -275,9 +257,9 @@ nav ul li a:hover {
 }
 
 .buku-koleksi {
-  display: flex;               /* aktifkan flexbox */
-  flex-direction: column;      /* urut ke bawah */
-  justify-content: space-between; /* dorong tombol ke bawah */
+  display: flex;               
+  flex-direction: column;      
+  justify-content: space-between; 
   flex: 1 1 200px;
   max-width: clamp(100px, 20%, 220px);
   background-color: #f9f9f9;
@@ -367,7 +349,7 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* biar lebih rapi antar box */
+  gap: 20px; 
   padding: 20px;
   background-color: #faebd7;
 }
@@ -429,17 +411,17 @@ footer p {
 }
 /* akhir style kontak */
 
-/* style koleksi.html  */
+/* style kategori buku  */
 .koleksi-buku {
   display: flex;
-  flex-direction: row;   /* default: sidebar kiri + konten kanan */
+  flex-direction: row;   
   background-color: #faebd7;
 }
 
 .kategori {
-  position: sticky;    /* biar tetap kelihatan waktu scroll */
+  position: sticky;    
   top: 0;
-  flex: 0 0 15%;       /* sidebar fix 15% */
+  flex: 0 0 15%;       
   min-width: 120px;
   max-width: 150px;
   height: 100vh;
@@ -451,7 +433,7 @@ footer p {
 
 .kategori h3 {
   margin-top: 80px;
-  font-size: 26px;
+  font-size: clamp(18px, 3vw, 24px);
   color: white;
   font-weight: 200;
 }
@@ -471,7 +453,7 @@ footer p {
   text-decoration: none;
   color: white;
   padding: 5px 10px;
-  font-size: 21px;
+  font-size: clamp(14px, 2vw, 17px);
   font-weight: 100;
   display: inline-block;
 }
@@ -487,7 +469,7 @@ footer p {
 }
 
 .buku {
-  flex: 1;                 /* isi memenuhi sisa ruang */
+  flex: 1;                 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -497,9 +479,9 @@ footer p {
 }
 
 .buku-box {
-  display: flex;               /* aktifkan flexbox */
-  flex-direction: column;      /* urut ke bawah */
-  justify-content: space-between; /* dorong tombol ke bawah */
+  display: flex;               
+  flex-direction: column;      
+  justify-content: space-between; 
   width: 100%;
   max-width: clamp(120px, 20%, 170px);
   background-color: #f9f9f9;
@@ -552,7 +534,7 @@ footer p {
 
 @media (max-width: 768px) {
   .koleksi-buku {
-    flex-direction: column;   /* kategori di atas, buku di bawah */
+    flex-direction: column;   
     overflow-x: hidden;
   }
 
@@ -562,7 +544,7 @@ footer p {
     max-width: none;
     height: auto;
     padding: 15px;
-    margin-top: 60px;         /* biar gak tabrakan navbar */
+    margin-top: 43px;         
   }
 
   .kategori h3 {
